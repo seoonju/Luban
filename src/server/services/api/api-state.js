@@ -20,7 +20,7 @@ export const get = (req, res) => {
     }
 
     const value = config.get(key);
-    res.send(value);
+    res.send({ value });  // Ensure the response is in JSON format to prevent XSS
 };
 
 export const unset = (req, res) => {
